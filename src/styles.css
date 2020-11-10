@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.is-invalid{
+    border-color: red;
+    border: 5px transparent #ff0000;
+}
+
+.d-none{
+    display: none;
+}
+
+.center {
+    /* margin: auto; */
+    width: 100%;
+    text-align: center;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+
+.align{
+    width: 60%;
+}
+
+.unbold{
+    font-weight: normal;
+}
+
+.h1-color{
+    color: rgb(100, 46, 7);
+}
+.space{
+    float: left;
+    margin-right: 10px;
+    margin-right: 10px;
+}
+
+.text-color{
+    color: brown;
+}
