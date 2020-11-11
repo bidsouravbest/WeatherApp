@@ -30,7 +30,7 @@ export class AppComponent
     this.apiId = '7cdf4c8736b8138bf2b687364098166d';
   }
 
-  onSubmit(weatherForm : NgForm)                // for assigning the entered loc from form to location property
+  onSubmit(weatherForm : NgForm)                  // for assigning the entered loc from form to location property
   {
     this.locSearched = true;
 
@@ -38,7 +38,6 @@ export class AppComponent
 
     this.getWeather(this.location);              //calling weather method to make the http get request
 
-    
   }
   onReset()                                     //used for resetting the form and setting the properties to default values
   {
@@ -47,7 +46,7 @@ export class AppComponent
     this.error = null;
   }
 
-  getWeather(location)                        /*to make the http get request and assigning the response to respective properties*/
+  getWeather(location : string)                 /*to make the http get request and assigning the response to respective properties*/
   {
     return this._http.get<any>(this.url + location +'&units=metric'+ '&appid=' + this.apiId)
       .subscribe(
@@ -55,7 +54,6 @@ export class AppComponent
           console.log(data);
           this.resultArray = data;},
         (err) => {
-          console.log(err);
           this.error = err.error.message;}
         );
   }
